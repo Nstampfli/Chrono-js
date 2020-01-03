@@ -52,17 +52,23 @@ start.addEventListener("click", function() {
   if (on === false) {
     myFunction();
     on = true;
+    start.classList.add("lock");
+    stop.classList.remove("lock");
+    reset.classList.remove("lock");
   }
 });
 
 stop.addEventListener("click", function() {
   clearTimeout(alertFuncTemplate);
   on = false;
+  stop.classList.add("lock");
+  start.classList.remove("lock");
+  reset.classList.remove("lock");
 });
 
 reset.addEventListener("click", function() {
-  let sec = 0;
-  let min = 0;
-  let hour = 0;
-  time.textContent = "0" + hour + ":0" + min + ":0" + sec;
+  window.location.reload();
+  stop.classList.add("lock");
+  reset.classList.add("lock");
+  start.classList.remove("lock");
 });
