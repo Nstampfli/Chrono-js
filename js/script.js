@@ -54,7 +54,6 @@ start.addEventListener("click", function() {
     on = true;
     start.classList.add("lock");
     stop.classList.remove("lock");
-    reset.classList.remove("lock");
   }
 });
 
@@ -63,12 +62,8 @@ stop.addEventListener("click", function() {
   on = false;
   stop.classList.add("lock");
   start.classList.remove("lock");
-  reset.classList.remove("lock");
 });
 
 reset.addEventListener("click", function() {
   window.location.reload();
-  stop.classList.add("lock");
-  reset.classList.add("lock");
-  start.classList.remove("lock");
 });
